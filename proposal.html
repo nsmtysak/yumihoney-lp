@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>ご提案｜LPでリピーターを増やす</title>
+<style>
+  :root{
+    --gold:#D89A2B; --gold-deep:#A8761A; --amber:#EBB14B;
+    --cream:#FCF7EC; --cream2:#F5E9D2; --paper:#fffdf8;
+    --brown:#3E2C18; --brown-soft:#6f5a40; --line:#ecdcbd;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo",sans-serif;
+    color:var(--brown); line-height:1.8; background:var(--cream); font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:480px; margin:0 auto; padding:0 20px;}
+  .serif{font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;}
+
+  /* header */
+  .top{padding:38px 0 30px; text-align:center; background:linear-gradient(180deg,var(--cream) 0%, var(--cream2) 100%);}
+  .top .tag{display:inline-block; font-size:11.5px; letter-spacing:.14em; font-weight:800; color:var(--gold-deep); background:#fff; border:1px solid var(--line); padding:6px 14px; border-radius:999px;}
+  .top h1{font-size:27px; font-weight:800; margin:16px 0 8px; line-height:1.55;}
+  .top h1 .em{color:var(--gold-deep);}
+  .top p.sub{font-size:13.5px; color:var(--brown-soft);}
+  .top .date{font-size:12px; color:var(--brown-soft); margin-top:14px;}
+
+  section{padding:34px 0;}
+  .eyebrow{font-size:11.5px; letter-spacing:.18em; color:var(--gold-deep); font-weight:800; text-align:center;}
+  h2.sec{font-size:20px; font-weight:800; text-align:center; margin:8px 0 20px; line-height:1.5;}
+
+  /* goal callout */
+  .goal{background:var(--brown); color:#f5ead2; border-radius:20px; padding:24px 22px; text-align:center; font-size:14.5px; line-height:1.9;}
+  .goal strong{color:#fff; font-size:16px; display:block; margin-bottom:6px;}
+
+  /* icon circle */
+  .ic{width:52px; height:52px; border-radius:50%; background:var(--paper); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; flex:none;}
+  .ic svg{width:26px; height:26px;}
+
+  /* 課題カード */
+  .issues{display:flex; flex-direction:column; gap:12px;}
+  .issue{display:flex; gap:14px; align-items:flex-start; background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:16px;}
+  .issue p{font-size:13.5px; color:var(--brown-soft); margin-top:4px;}
+  .issue h3{font-size:14.5px; color:var(--brown);}
+
+  /* flow */
+  .flow{display:flex; flex-direction:column; align-items:center; position:relative;}
+  .fstep{display:flex; align-items:center; gap:14px; background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:14px 18px; width:100%; }
+  .fstep .num{font-size:11px; font-weight:800; color:#fff; background:var(--gold); width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex:none;}
+  .fstep .ftxt h4{font-size:14.5px;}
+  .fstep .ftxt p{font-size:12.5px; color:var(--brown-soft); margin-top:2px;}
+  .farrow{padding:6px 0; color:var(--gold-deep);}
+  .farrow svg{width:16px; height:20px;}
+  .flow-wrap{display:flex; flex-direction:column; gap:0; width:100%;}
+
+  /* accordion */
+  details{background:var(--paper); border:1px solid var(--line); border-radius:16px; margin-bottom:12px; overflow:hidden;}
+  details[open]{border-color:var(--gold);}
+  summary{list-style:none; cursor:pointer; padding:16px 18px; display:flex; align-items:center; gap:14px; -webkit-tap-highlight-color:transparent;}
+  summary::-webkit-details-marker{display:none;}
+  summary .stitle{flex:1;}
+  summary .stitle h3{font-size:15px; color:var(--brown);}
+  summary .stitle .hook{font-size:12.5px; color:var(--brown-soft); margin-top:2px;}
+  summary .chev{width:20px; height:20px; flex:none; color:var(--gold-deep); transition:transform .2s;}
+  details[open] summary .chev{transform:rotate(180deg);}
+  .dbody{padding:0 18px 18px 66px; font-size:13.5px; color:var(--brown-soft); line-height:1.85;}
+  .dbody .mini{display:inline-block; margin-top:10px; font-size:11.5px; color:var(--gold-deep); background:var(--cream2); padding:3px 10px; border-radius:999px; font-weight:700;}
+  .example{margin-top:12px; background:var(--cream2); border-left:3px solid var(--gold); border-radius:0 10px 10px 0; padding:10px 14px;}
+  .example .lbl{display:block; font-size:10.5px; font-weight:800; color:var(--gold-deep); letter-spacing:.06em; margin-bottom:4px;}
+  .example .txt{font-size:13px; color:var(--brown); font-style:italic; line-height:1.7;}
+
+  /* recap */
+  .recap{display:flex; flex-direction:column; gap:10px;}
+  .rcard{display:flex; gap:12px; align-items:center; background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:13px 16px;}
+  .rcard .rnum{font-size:12px; font-weight:800; color:#fff; background:var(--gold-deep); width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex:none;}
+  .rcard p{font-size:13px; color:var(--brown); font-style:italic; line-height:1.7;}
+
+  .lv2 summary{padding:13px 16px;}
+  .lv2 summary .stitle h3{font-size:14px;}
+  .lv2 .dbody{padding:0 16px 16px 16px; font-size:13px;}
+
+  /* before/after */
+  .ba{display:flex; gap:10px;}
+  .bacol{flex:1; background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:18px 14px; text-align:center;}
+  .bacol.after{background:var(--cream2); border-color:var(--gold);}
+  .bacol .label{font-size:11px; font-weight:800; letter-spacing:.08em; color:var(--brown-soft);}
+  .bacol.after .label{color:var(--gold-deep);}
+  .bacol .big{font-size:14px; font-weight:800; margin:10px 0 6px; line-height:1.6;}
+  .bacol p{font-size:12px; color:var(--brown-soft);}
+  .baarrow{display:flex; align-items:center; color:var(--gold-deep);}
+  .baarrow svg{width:18px; height:18px;}
+
+  /* CTA */
+  .cta-box{background:var(--paper); border:1.5px dashed var(--gold); border-radius:18px; padding:24px 20px; text-align:center;}
+  .cta-box h3{font-size:16.5px; margin-bottom:10px;}
+  .cta-box p{font-size:13.5px; color:var(--brown-soft);}
+  .steps4{display:flex; justify-content:center; gap:8px; margin-top:16px; flex-wrap:wrap;}
+  .steps4 span{font-size:12px; font-weight:800; color:#fff; background:var(--gold); padding:6px 12px; border-radius:999px;}
+
+  footer{text-align:center; padding:26px 22px; color:var(--brown-soft); font-size:11.5px;}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <span class="tag">CoreWorks ご提案資料</span>
+    <h1>LPを、<span class="em">"リピーターを育てる場所"</span>に<br>して導入しませんか？</h1>
+    <p class="sub">有美ちゃんの養蜂場さまへ ｜ LP新規導入のご提案</p>
+    <div class="date">2026年7月</div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="goal">
+      <strong>今日、お伝えしたいこと</strong>
+      これから作るLPを、ただの紹介ページで終わらせず、<br>最初から<strong style="color:#fff;">リピーターが育つ仕組み</strong>として設計したい、というご提案です。
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">WHY LP</div>
+    <h2 class="sec">今のままだと、<br>逃してしまうかもしれないこと</h2>
+    <div class="issues">
+      <div class="issue">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#A8761A" stroke-width="1.7"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><path d="M14 14h6v6h-6z"/></svg></div>
+        <div><h3>QRを配っても、着地点がない</h3><p>サンクスカードやラベルにQRを付けたくても、その先に受け皿となるページがなければ、次の案内にも紹介にもつながりません。LPは、そのQRの「行き先」であり「次につなげる入口」になります。</p></div>
+      </div>
+      <div class="issue">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#A8761A" stroke-width="1.7"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg></div>
+        <div><h3>メールだけでは、案内が届かないことがある</h3><p>受注確認メールが迷惑メールフォルダに入ってしまうと、次の蜜の情報が届かないまま忘れられてしまいます。LPがあれば、LINEやSNSなど複数の経路で「次」をお知らせできるようになります。</p></div>
+      </div>
+      <div class="issue">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#A8761A" stroke-width="1.7"><path d="M12 3c4 4 6 7 6 10a6 6 0 1 1-12 0c0-3 2-6 6-10z"/></svg></div>
+        <div><h3>「毎回味が違う」は、口頭だけでは伝えきれない</h3><p>季節や花によって毎回違う蜜が採れることは、本来いちばんの魅力です。ですが口頭やSNSの投稿だけでは伝えきれず、初めての方には「前と違う」という不安に見えてしまうこともあります。LPで一貫したストーリーとして伝えることで、魅力に変えられます。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="eyebrow">HOW IT WORKS</div>
+    <h2 class="sec">LPが売上につながる流れ</h2>
+    <div class="flow-wrap">
+      <div class="fstep"><div class="num">1</div><div class="ftxt"><h4>商品をお届け</h4><p>サンクスカード・ラベルにQRを添える</p></div></div>
+      <div class="farrow"><svg viewBox="0 0 12 16"><path d="M6 0v14M1 9l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></div>
+      <div class="fstep"><div class="num">2</div><div class="ftxt"><h4>QRからLPへ</h4><p>スマホでその場で読み取ってもらう</p></div></div>
+      <div class="farrow"><svg viewBox="0 0 12 16"><path d="M6 0v14M1 9l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></div>
+      <div class="fstep"><div class="num">3</div><div class="ftxt"><h4>LPで「次」に気づく</h4><p>今期の蜜・使い方・お知らせ登録</p></div></div>
+      <div class="farrow"><svg viewBox="0 0 12 16"><path d="M6 0v14M1 9l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></div>
+      <div class="fstep"><div class="num">4</div><div class="ftxt"><h4>再購入・紹介</h4><p>次の蜜を買う／知人にすすめる</p></div></div>
+      <div class="farrow"><svg viewBox="0 0 12 16"><path d="M6 0v14M1 9l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></div>
+      <div class="fstep" style="background:var(--cream2); border-color:var(--gold);"><div class="num" style="background:var(--gold-deep);">5</div><div class="ftxt"><h4 style="color:var(--gold-deep);">売上アップ</h4><p>広告費をかけずに、既存のお客様から育つ</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">WHAT TO DO — LPに盛り込みたいこと</div>
+    <h2 class="sec">気になるところから、<br>タップして読んでみてください</h2>
+    <p style="text-align:center; font-size:13.5px; color:var(--brown-soft); margin:-8px 0 22px;">LPを作るとき、この4つの内容をあらかじめ盛り込んでおくことで、リピーターにつながりやすい入口になります。</p>
+
+    <details open>
+      <summary>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#A8761A" stroke-width="1.7"><path d="M4 5h16v11H8l-4 4z"/></svg></div>
+        <div class="stitle"><h3>LINEで「次のお知らせ」を受け取れるように</h3><div class="hook">メール不着の悩みも同時に解決</div></div>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="dbody">
+        Instagramのフォローだけでは、見てもらえるとは限りません。LPにLINE公式アカウントへの登録導線を置くと、開封率が高く、次の蜜の入荷を見逃されにくくなります。受注メールが迷惑メール扱いされる心配もなくなり、"買った後の関係"を自分たちの手で維持できるようになります。
+        <div class="example"><span class="lbl">LPに書いておきたい一文</span><span class="txt">「次の蜜が採れたら、いちばん先にLINEでお知らせします。今だけの一本を、逃さないでください。」</span></div>
+        <span class="mini">LPだけで実装可能</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#A8761A" stroke-width="1.7"><path d="M6 3h9l3 3v15H6z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg></div>
+        <div class="stitle"><h3>使い方・レシピを増やす</h3><div class="hook">早く使い切るほど、次が近づく</div></div>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="dbody">
+        トーストやヨーグルトといった定番の食べ方だけでなく、料理への使い方まで具体的に紹介すると、使い切りのペースが上がります。使い切りが早いほど、次の購入を検討するタイミングも自然と早まります。「気づいたらまだ半分残っている」状態が、実はリピートをいちばん遠ざけてしまいます。
+        <div class="example"><span class="lbl">LPに書いておきたい見出し</span><span class="txt">「はちみつが最後の一滴までなくなる、5つの楽しみ方。」</span></div>
+        <span class="mini">LPだけで実装可能</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#A8761A" stroke-width="1.7"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9h16M8 3v4M16 3v4"/></svg></div>
+        <div class="stitle"><h3>賞味期限の目安を書く</h3><div class="hook">「そろそろ」を自然に思い出してもらう</div></div>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="dbody">
+        「賞味期限は〇年、開封後は〇ヶ月が目安」と書くだけで、お客様自身が次の購入タイミングを逆算できるようになります。さらに、使い切る時期と次の季節の蜜が採れる時期を重ねて伝えると、「ちょうど次が届く頃」という自然な流れを作れます。
+        <div class="example"><span class="lbl">LPに書いておきたい一文</span><span class="txt">「開封後の目安は、だいたい2〜3ヶ月。使い切る頃、ちょうど次の季節の蜜が届きます。」</span></div>
+        <span class="mini">賞味期限の確認が必要</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#A8761A" stroke-width="1.7"><path d="M4 8l8-5 8 5v9l-8 5-8-5z"/><path d="M4 8l8 5 8-5M12 13v8"/></svg></div>
+        <div class="stitle"><h3>「今まで出会った蜜」を記録する</h3><div class="hook">"違う"を集める楽しみに変える</div></div>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="dbody">
+        季節ごとに味が変わるのは弱みではなく個性です。過去に出会った蜜をLP上に記録として残しておくと、「まだ飲んでいない味」を集めたくなる気持ちが生まれ、コレクションする楽しみそのものがリピートの動機になります。
+        <div class="example"><span class="lbl">LPに書いておきたい一文</span><span class="txt">「今期で7種類目。次はどの花の蜜に出会えるでしょう。」</span></div>
+        <span class="mini">LPだけで実装可能</span>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section style="background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="eyebrow">KEY MESSAGE</div>
+    <h2 class="sec">この4つの言葉を置くだけで、<br>LPの働きが変わります</h2>
+    <div class="recap">
+      <div class="rcard"><div class="rnum">1</div><p>「次の蜜が採れたら、いちばん先にLINEでお知らせします。」</p></div>
+      <div class="rcard"><div class="rnum">2</div><p>「はちみつが最後の一滴までなくなる、5つの楽しみ方。」</p></div>
+      <div class="rcard"><div class="rnum">3</div><p>「使い切る頃、ちょうど次の季節の蜜が届きます。」</p></div>
+      <div class="rcard"><div class="rnum">4</div><p>「今期で7種類目。次はどの花の蜜に出会えるでしょう。」</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="eyebrow">NEXT STEP — 少し先に</div>
+    <h2 class="sec">商品・運用と合わせて<br>検討したいこと</h2>
+
+    <details class="lv2">
+      <summary>
+        <div class="stitle"><h3>頒布会・定期便</h3><div class="hook">実は他の養蜂場でも定番の仕組みです</div></div>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="dbody" style="padding-left:16px;">
+        季節ごとに届く仕組みにすると、「毎回違う」という個性がそのまま商品価値になります。届くたびに「今回はどんな蜜だろう」という楽しみが生まれ、契約している間は自動的にリピーターであり続けてもらえます。まずはLPに「興味がある方はこちら」という声を集める窓口を作るところから、リスクなく始められます。
+        <div class="example" style="margin-left:0;"><span class="lbl">LPに書いておきたい一文</span><span class="txt">「毎シーズン、その時だけの一本をお届けします。」</span></div>
+      </div>
+    </details>
+
+    <details class="lv2">
+      <summary>
+        <div class="stitle"><h3>紹介特典</h3><div class="hook">紹介での拡販と相性が良い施策</div></div>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="dbody" style="padding-left:16px;">紹介した人・された人の両方に小さな特典があると、口コミが実際の購入につながりやすくなります。特典は割引でなくても、次回使える小瓶のおまけなど、コストを抑えた形でも十分に効果があります。特典の内容・原資は要相談です。</div>
+    </details>
+
+    <details class="lv2">
+      <summary>
+        <div class="stitle"><h3>詰め替え・少量サイズ</h3><div class="hook">再購入のハードルを下げる</div></div>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="dbody" style="padding-left:16px;">気軽に買い足せる小容量・詰め替え用があると、購入の心理的ハードルが下がり、リピート頻度が上がります。特に、気に入った方が「少しだけ買い足したい」というニーズに応えられるのが強みです。商品化の判断が前提になります。</div>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">EXPECTED CHANGE</div>
+    <h2 class="sec">目指したい変化</h2>
+    <div class="ba">
+      <div class="bacol">
+        <div class="label">これまで</div>
+        <div class="big">買って、<br>それで終わり</div>
+        <p>QRを読んでも、その先に「次」がない</p>
+      </div>
+      <div class="baarrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div>
+      <div class="bacol after">
+        <div class="label">これから</div>
+        <div class="big">また選ばれる、<br>続く関係に</div>
+        <p>次の蜜・使い方・紹介まで、LPが橋渡しする</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-box">
+      <h3 class="serif">まずは、ここから</h3>
+      <p>LPを作る段階でこの4つを盛り込み、効果を見ながら頒布会や紹介特典など次の一手を一緒に決めていきませんか。</p>
+      <div class="steps4">
+        <span>①LINE案内</span><span>②レシピ拡充</span><span>③賞味期限表示</span><span>④蜜の記録</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>ご提案資料 ／ 作成：CoreWorks<br>ご不明点・ご要望があれば、いつでもお聞かせください。</footer>
+
+</body>
+</html>
