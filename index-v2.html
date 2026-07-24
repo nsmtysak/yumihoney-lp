@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>有美ちゃんの養蜂場 ｜ 非加熱・採れたての純粋国産はちみつ</title>
+<meta name="description" content="兵庫県稲美町の小さな養蜂場から。加熱も加工もせず、採れたてを濾しただけの純粋な国産はちみつ。糖度・香り・味を巣箱ひとつずつ確かめて出荷しています。">
+<style>
+  :root{
+    --gold:#D89A2B; --gold-deep:#A8761A; --amber:#EBB14B;
+    --cream:#FCF7EC; --cream2:#F5E9D2; --paper:#fffdf8;
+    --brown:#3E2C18; --brown-soft:#6f5a40; --line:#ecdcbd;
+    --leaf:#6f8a3e;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo",sans-serif;
+    color:var(--brown); line-height:1.9; background:var(--cream); font-size:16px;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  .serif{font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;}
+  .wrap{max-width:760px; margin:0 auto; padding:0 22px;}
+  .gold{color:var(--gold-deep);}
+
+  /* header */
+  header.site{position:sticky; top:0; z-index:20; background:rgba(252,247,236,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  header.site .wrap{display:flex; align-items:center; justify-content:space-between; padding:13px 22px;}
+  header.site .brand{font-weight:800; font-size:16px; color:var(--brown);}
+  header.site .brand .bee{color:var(--gold);}
+  header.site a.buy{font-size:13px; font-weight:800; color:#fff; background:var(--gold); padding:9px 16px; border-radius:999px; text-decoration:none;}
+
+  /* hero */
+  .hero{position:relative; text-align:center; padding:50px 0 0; background:linear-gradient(180deg,var(--cream) 0%, var(--cream2) 100%);}
+  .award{display:inline-flex; align-items:center; gap:7px; background:#fff; border:1px solid var(--line); color:var(--gold-deep); font-weight:800; font-size:12.5px; padding:7px 15px; border-radius:999px; letter-spacing:.04em;}
+  .hero h1{font-size:30px; line-height:1.6; margin:20px 0 14px; font-weight:800; color:var(--brown);}
+  .hero h1 .em{color:var(--gold-deep);}
+  .hero p.lead{font-size:16px; color:var(--brown-soft); max-width:560px; margin:0 auto 26px;}
+  .hero .sub-link{display:block; margin-top:14px; font-size:13px; color:var(--brown-soft); text-decoration:none; border-bottom:1px dashed var(--line); padding-bottom:2px;}
+  .hero-photo{border-radius:24px 24px 0 0;}
+
+  .cta{display:inline-block; text-decoration:none; font-weight:800; font-size:16px; padding:15px 34px; border-radius:999px; background:var(--gold); color:#fff; box-shadow:0 12px 24px -10px rgba(168,118,26,.7);}
+  .cta.outline{background:#fff; color:var(--gold-deep); border:2px solid var(--gold);}
+
+  section{padding:54px 0;}
+  .eyebrow{text-align:center; font-size:12.5px; letter-spacing:.22em; color:var(--gold-deep); font-weight:800;}
+  h2.sec{font-size:24px; text-align:center; font-weight:800; margin:10px 0 8px; color:var(--brown); line-height:1.55;}
+  .sec-lead{text-align:center; color:var(--brown-soft); max-width:580px; margin:0 auto 34px; font-size:15px;}
+
+  /* こだわり 3点 */
+  .kodawari{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  .kbox{background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:20px 18px;}
+  .kbox h3{font-size:16px; color:var(--brown); margin-bottom:8px; line-height:1.6;}
+  .kbox p{font-size:13px; color:var(--brown-soft); line-height:1.85;}
+  .kbox .note{display:block; margin-top:8px; font-size:11.5px; color:#a08650;}
+
+  /* 本物の見分けかた */
+  .choose{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .clist{max-width:620px; margin:0 auto;}
+  .citem{background:var(--cream); border:1px solid var(--line); border-radius:18px; padding:20px 22px; margin-bottom:14px;}
+  .citem .cnum{display:inline-block; font-size:13px; font-weight:800; color:#fff; background:var(--gold); width:26px; height:26px; line-height:26px; text-align:center; border-radius:50%; margin-right:9px; vertical-align:2px;}
+  .citem h3{display:inline; font-size:17px; color:var(--brown);}
+  .citem p{font-size:14px; color:var(--brown-soft); margin-top:10px; line-height:1.9;}
+  .citem .src{display:block; margin-top:8px; font-size:11.5px; color:#a08650;}
+  .choose-close{text-align:center; max-width:560px; margin:26px auto 0; font-size:15px; color:var(--brown); line-height:1.95;}
+
+  /* 自己適用ボックス */
+  .selfcheck{max-width:620px; margin:22px auto 0; background:#fff; border:1.5px solid var(--gold); border-radius:18px; padding:20px 22px; box-shadow:0 10px 22px -16px rgba(168,118,26,.6);}
+  .selfcheck .sc-ttl{font-size:14.5px; font-weight:800; color:var(--gold-deep); text-align:center; margin-bottom:14px;}
+  .selfcheck .sc-row{display:flex; justify-content:space-between; align-items:baseline; gap:12px; font-size:14px; color:var(--brown-soft); padding:8px 0; border-bottom:1px dashed var(--line);}
+  .selfcheck .sc-row b{color:var(--brown); font-size:15px; text-align:right;}
+  .selfcheck .sc-note{font-size:11.5px; color:#a08650; margin-top:10px; text-align:center;}
+
+  /* 言わないと決めていること */
+  .nosay{max-width:620px; margin:26px auto 0; background:var(--brown); color:#f2e7d6; border-radius:20px; padding:24px 26px;}
+  .nosay .ns-ttl{font-size:16px; font-weight:800; color:#fff; margin-bottom:12px; line-height:1.65;}
+  .nosay p{font-size:14px; line-height:1.95; color:#ddccb4;}
+  .nosay p + p{margin-top:10px;}
+  .nosay strong{color:var(--amber);}
+
+  /* 認定カード */
+  .cert-card{display:block; text-decoration:none; color:inherit; max-width:460px; margin:0 auto 16px; background:linear-gradient(135deg,#fff,var(--cream2)); border:1.5px solid var(--gold); border-radius:18px; padding:18px 20px; box-shadow:0 10px 22px -14px rgba(168,118,26,.55);}
+  .cert-card .cert-top{display:flex; align-items:center; gap:10px;}
+  .cert-card .cert-star{font-size:22px; line-height:1;}
+  .cert-card .cert-name{font-weight:800; font-size:15.5px; color:var(--brown);}
+  .cert-card .cert-sub{font-size:12px; color:var(--brown-soft); margin-top:2px;}
+  .cert-card p.cert-desc{font-size:13px; color:var(--brown-soft); margin-top:10px; line-height:1.8;}
+  .cert-card .cert-tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px;}
+  .cert-card .cert-tag{font-size:11px; font-weight:700; color:var(--gold-deep); background:#fff; border:1px solid var(--line); padding:3px 10px; border-radius:999px;}
+  .cert-card .cert-link{display:inline-flex; align-items:center; gap:4px; margin-top:12px; font-size:13px; font-weight:800; color:var(--gold-deep);}
+  .cert-card.furusato{background:linear-gradient(135deg,#fff,#eef2e3); border-color:var(--leaf);}
+  .cert-card.furusato .cert-link{color:var(--leaf);}
+
+  /* ストーリー */
+  .story-grid{display:grid; grid-template-columns:1.1fr 1fr; gap:26px; align-items:center;}
+  .story-grid .img{border-radius:20px; overflow:hidden; height:300px;}
+  .story-grid p{font-size:15px; color:var(--brown-soft);}
+
+  /* 蜜の種類 */
+  .honeys{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:680px; margin:0 auto;}
+  .hcard{background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:20px 18px; text-align:center;}
+  .hcard .hbar{width:34px; height:4px; border-radius:999px; margin:0 auto 12px; background:var(--gold);}
+  .hcard.b .hbar{background:var(--amber);}
+  .hcard.c .hbar{background:var(--gold-deep);}
+  .hcard h3{font-size:16px; color:var(--brown); margin-bottom:8px;}
+  .hcard p{font-size:13px; color:var(--brown-soft); line-height:1.85;}
+
+  /* 食べ方 */
+  .enjoy{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; max-width:680px; margin:0 auto;}
+  .ecard{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:22px 14px; text-align:center;}
+  .ecard .ei{font-size:30px; line-height:1; margin-bottom:10px;}
+  .ecard h4{font-size:14.5px; color:var(--brown); margin-bottom:5px;}
+  .ecard p{font-size:12px; color:var(--brown-soft); line-height:1.75;}
+
+  /* 商品 */
+  .products{display:grid; grid-template-columns:1fr 1fr; gap:18px; max-width:560px; margin:0 auto;}
+  .pcard{background:var(--paper); border:1px solid var(--line); border-radius:18px; overflow:hidden; text-decoration:none; color:inherit; display:block;}
+  .pcard .pphoto{height:175px; overflow:hidden;}
+  .pcard .pbody{padding:16px 16px 18px;}
+  .pcard h3{font-size:15.5px; color:var(--brown); margin-bottom:4px;}
+  .pcard .vol{font-size:12.5px; color:var(--brown-soft);}
+  .pcard .price{font-size:18px; font-weight:800; color:var(--gold-deep); margin-top:8px;}
+  .pcard .price small{font-size:12px; color:var(--brown-soft); font-weight:600;}
+  .pcard .unit{font-size:12px; color:var(--brown-soft); margin-top:2px;}
+
+  /* 値段の理由 */
+  .reason{max-width:620px; margin:34px auto 0; background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:24px 24px 20px;}
+  .reason h3{font-size:16.5px; color:var(--brown); text-align:center; margin-bottom:16px;}
+  .reason .ritem{padding:12px 0; border-top:1px dashed var(--line);}
+  .reason .ritem:first-of-type{border-top:none; padding-top:0;}
+  .reason .ritem b{display:block; font-size:14.5px; color:var(--gold-deep); margin-bottom:3px;}
+  .reason .ritem p{font-size:13.5px; color:var(--brown-soft); line-height:1.85;}
+  .alert-baby{max-width:620px; margin:16px auto 0; background:#fff6ea; border:1px solid #e6c894; border-radius:14px; padding:13px 18px; font-size:13px; color:#8a6520; text-align:center;}
+  .alert-baby a{color:#8a6520; font-weight:800;}
+  .shipbox{max-width:620px; margin:22px auto 0; background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:6px 20px;}
+  .shipbox .sb-row{display:flex; gap:16px; align-items:baseline; padding:13px 0; border-bottom:1px dashed var(--line); font-size:13.5px;}
+  .shipbox .sb-row:last-child{border-bottom:none;}
+  .shipbox .sb-row > span{flex:none; width:88px; font-weight:800; color:var(--gold-deep);}
+  .shipbox .sb-row b{color:var(--brown); font-weight:700;}
+  .shipbox .sb-sub{display:block; font-weight:400; color:var(--brown-soft); font-size:12.5px; margin-top:4px; line-height:1.8;}
+
+  /* FAQ */
+  .faq{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .faqlist{max-width:640px; margin:0 auto;}
+  details.q{background:var(--cream); border:1px solid var(--line); border-radius:16px; margin-bottom:12px; overflow:hidden;}
+  details.q summary{list-style:none; cursor:pointer; padding:16px 46px 16px 20px; font-size:15px; font-weight:700; color:var(--brown); position:relative; line-height:1.7;}
+  details.q summary::-webkit-details-marker{display:none;}
+  details.q summary::after{content:"＋"; position:absolute; right:20px; top:15px; color:var(--gold-deep); font-weight:800; font-size:16px;}
+  details.q[open] summary::after{content:"−";}
+  details.q .a{padding:0 20px 18px; font-size:14px; color:var(--brown-soft); line-height:1.95;}
+  details.q .a .ph{display:inline-block; font-size:11px; color:#a9853a; background:#fbf2dd; border:1px dashed #d8bf86; padding:2px 8px; border-radius:6px;}
+
+  /* 購入導線 */
+  .buyrow{display:flex; flex-direction:column; gap:14px; max-width:440px; margin:0 auto;}
+  .buybtn{display:flex; align-items:center; gap:14px; text-decoration:none; background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:16px 20px; color:var(--brown); font-weight:700;}
+  .buybtn .bi{width:42px; height:42px; border-radius:12px; background:var(--cream2); display:flex; align-items:center; justify-content:center; flex:none;}
+  .buybtn .bi svg{width:24px; height:24px;}
+  .buybtn .sub{display:block; font-size:12px; color:var(--brown-soft); font-weight:600;}
+  .buybtn.main{background:var(--gold); color:#fff; border-color:var(--gold);}
+  .buybtn.main .bi{background:rgba(255,255,255,.22);}
+  .buybtn.main .sub{color:#fff6e4;}
+
+  /* info */
+  .info{background:var(--brown); color:#f0e4d2; text-align:center;}
+  .info .wrap{padding:44px 22px;}
+  .info h3{color:#fff; font-size:18px; margin-bottom:10px;}
+  .info p{font-size:14px; color:#d9c8b2; line-height:2;}
+  footer.site{background:#33240f; color:#b6a283; text-align:center; padding:20px; font-size:12px;}
+
+  .demo-banner{background:#5a4424; color:#ffe9c2; text-align:center; font-size:12.5px; padding:9px 16px;}
+  .ph-note{display:inline-block; font-size:11px; color:#a9853a; background:#fbf2dd; border:1px dashed #d8bf86; padding:2px 8px; border-radius:6px;}
+
+  @media(max-width:680px){
+    .kodawari{grid-template-columns:1fr;}
+    .honeys{grid-template-columns:1fr;}
+    .enjoy{grid-template-columns:1fr;}
+    .story-grid{grid-template-columns:1fr;}
+    .story-grid .img{height:210px;}
+    .hero h1{font-size:25px;}
+    h2.sec{font-size:21px;}
+    section{padding:44px 0;}
+    .citem{padding:18px 18px;}
+    .reason{padding:20px 18px 16px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo-banner">これは CoreWorks が作成した紹介ページの<strong>試作（改稿版）</strong>です。一部の写真はフリー素材の仮当て、〔　〕で示した箇所は<strong>本人確認待ち</strong>です。</div>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand"><span class="bee">&#127855;</span> 有美ちゃんの養蜂場</div>
+    <a class="buy" href="#buy">お取り寄せ</a>
+  </div>
+</header>
+
+<!-- 1. ヒーロー -->
+<div class="hero">
+  <div class="wrap">
+    <div class="award">&#11088; 五つ星ひょうご 選定商品 ／ 兵庫・稲美町</div>
+    <h1>今年しか採れない蜜を、<br><span class="em">巣箱ひとつずつ</span>、確かめて。</h1>
+    <p class="lead">兵庫県稲美町の、小さな養蜂場です。加熱も加工もせず、採れたての蜜をただ濾しただけ。糖度と香りと味を巣箱ごとに確かめて、その季節のいちばん良い状態でお届けしています。</p>
+    <a class="cta" href="#lineup">今お出しできる蜜を見る &rarr;</a>
+    <a class="sub-link" href="#choose">はちみつの選びかたから読む &darr;</a>
+  </div>
+  <div class="wrap" style="max-width:760px; padding:0;">
+    <div class="hero-photo" style="margin:34px 22px 0; height:300px; overflow:hidden;"><img src="assets/hero.jpg" alt="採れたての純粋はちみつ" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+  </div>
+</div>
+
+<!-- 2. こだわり -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">OUR HONEY</div>
+    <h2 class="sec">3つの、ゆずれないこと。</h2>
+    <div class="kodawari">
+      <div class="kbox">
+        <h3>香りのために、<br>熱を加えません。</h3>
+        <p>加熱は、たくさんの量をむらなく早く扱うための工程です。そのぶん、いちばん繊細な部分——香りが目減りします。当養蜂場は熱を加えず、採れたてをただ濾すだけ。時間はかかりますが、そのぶんの香りが瓶の中に残ります。</p>
+      </div>
+      <div class="kbox">
+        <h3>巣箱ひとつずつ、<br>確かめてから。</h3>
+        <p>蜜は、巣箱ごとに違います。同じ場所でも、蜂が通った花が違えば味が変わる。だから出荷の前に、糖度・香り・味をひと箱ずつ確かめます。違いをならすためではなく、その違いを見きわめて、良い状態のものだけをお渡しするために。</p>
+      </div>
+      <div class="kbox">
+        <h3>同じ味は、<br>来年つくれません。</h3>
+        <p>花の咲きかたも、その年の天候も、選ぶことはできません。だから蜜も、季節ごと年ごとに表情が変わります。均一にする方法もありますが、それはしていません。今年の蜜は、今年のうちに。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 本物の見分けかた -->
+<section class="choose" id="choose">
+  <div class="wrap">
+    <div class="eyebrow">HOW TO CHOOSE</div>
+    <h2 class="sec">本物の見分けかたを、<br>先にお伝えします。</h2>
+    <p class="sec-lead">売る側が「本物です」と言っても、それだけでは確かめようがありません。ご自宅にある瓶で、いますぐ確かめられることを3つだけ書いておきます。</p>
+    <div class="clist">
+
+      <div class="citem">
+        <span class="cnum">一</span><h3>裏の「原材料名」を見る</h3>
+        <p>純粋なはちみつなら、原材料名は「はちみつ」の一語だけです。砂糖や水あめを加えたものは「加糖はちみつ」、精製したものは「精製はちみつ」と、別の名前で表示する決まりになっています。</p>
+        <span class="src">出典：はちみつ類の表示に関する公正競争規約</span>
+      </div>
+
+      <div class="citem">
+        <span class="cnum">二</span><h3>「原産国」を見る</h3>
+        <p>日本で流通するはちみつのうち、国産はおよそ6%。残りの多くは輸入で、そのうち約7割が中国産です。「国産」と書かれた瓶は、それだけでもう少数派です。</p>
+        <span class="src">出典：農林水産省「養蜂をめぐる情勢」</span>
+      </div>
+
+      <div class="citem">
+        <span class="cnum">三</span><h3>「100gあたりの値段」を見る</h3>
+        <p>内容量はお店ごとにばらばらなので、値札のままでは比べられません。100gあたりに直すと、はじめて横に並びます。国産の純粋はちみつでは、100gあたり500円前後からがひとつの目安とされています。</p>
+        <span class="src">出典：はちみつの選び方を扱う比較メディアで広く使われる目安</span>
+      </div>
+
+    </div>
+
+    <div class="selfcheck">
+      <div class="sc-ttl">この3つを、うちの瓶に当ててみます。</div>
+      <div class="sc-row"><span>原材料名</span><b>はちみつ</b></div>
+      <div class="sc-row"><span>原産国名</span><b>日本（兵庫県稲美町）</b></div>
+      <div class="sc-row"><span>100gあたり</span><b>約538円 〜 約585円</b></div>
+      <div class="sc-note">270g／1,580円＝約585円、480g／2,580円＝約538円（いずれも税込）</div>
+    </div>
+
+    <p class="choose-close serif">どれも、うちを選んでいただくための話ではありません。<br>はちみつを選ぶときの、ふつうの物差しです。</p>
+
+    <div class="nosay">
+      <div class="ns-ttl">言わないと決めていることが、ひとつあります。</div>
+      <p>「非加熱だから栄養価が高い」「酵素が生きている」——この言い方は、業界団体自身が否定しています。だから、うちでは申し上げません。</p>
+      <p>熱を加えないことで変わるのは、栄養ではなく<strong>香りと風味</strong>です。うちが加熱をしないのは、その香りを残したいから。それ以上のことは、言いません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 第三者評価 -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">CERTIFIED</div>
+    <h2 class="sec">私たち以外の目でも、<br>確かめられています。</h2>
+    <p class="sec-lead">自分で言う「おいしい」には限りがあります。外からいただいた評価を、そのまま載せます。</p>
+    <a class="cert-card" href="https://www.5stars-hyogo.com/products/2139/" target="_blank" rel="noopener">
+      <div class="cert-top">
+        <span class="cert-star">&#11088;</span>
+        <div>
+          <div class="cert-name">「五つ星ひょうご」選定商品</div>
+          <div class="cert-sub">公益社団法人 兵庫県物産協会</div>
+        </div>
+      </div>
+      <p class="cert-desc">兵庫県内の数ある特産品の中から選ばれる「五つ星ひょうご」。稲美町の純粋はちみつが、令和元年度・調味料部門の選定商品に選ばれています。</p>
+      <div class="cert-tags">
+        <span class="cert-tag">令和元年度 選定</span>
+        <span class="cert-tag">調味料部門</span>
+        <span class="cert-tag">稲美町産はちみつ</span>
+      </div>
+      <div class="cert-link">五つ星ひょうご公式サイトで見る &rarr;</div>
+    </a>
+    <a class="cert-card furusato" href="https://www.town.hyogo-inami.lg.jp/0000007053.html" target="_blank" rel="noopener">
+      <div class="cert-top">
+        <span class="cert-star">&#127881;</span>
+        <div>
+          <div class="cert-name">稲美町 ふるさと納税 返礼品</div>
+          <div class="cert-sub">稲美町 協力企業</div>
+        </div>
+      </div>
+      <p class="cert-desc">稲美町のふるさと納税に、協力企業として返礼品を提供しています。町と大学の連携による取材では、巣箱ごとに糖度や香りを確かめてから出荷するつくりかたが紹介されました。</p>
+      <div class="cert-tags">
+        <span class="cert-tag">ふるさと納税 協力企業</span>
+        <span class="cert-tag">稲美町 官学連携レポート</span>
+      </div>
+      <div class="cert-link">稲美町の紹介記事を見る &rarr;</div>
+    </a>
+  </div>
+</section>
+
+<!-- 5. 作り手 -->
+<section style="background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="img"><img src="assets/flower.jpg" alt="花からミツバチが蜜を集める" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+      <div>
+        <div class="eyebrow" style="text-align:left;">SINCE 2011 ・ FROM INAMI-CHO</div>
+        <h2 class="sec" style="text-align:left;">はじまりは、<br>いただいた一瓶でした。</h2>
+        <p>平成23年の春。知り合いの養蜂家の方からいただいた一瓶の、味と香りに驚きました。「こんなに美味しいハチミツを、自分で作ってみたい」。そう思ったことが、有美ちゃんの養蜂場のはじまりです。</p>
+        <p style="margin-top:12px;">いまも会社勤めのかたわら、家族3人で続けています。蜂の世話をするのが主人と義父、お渡しするのが私。大きくするより、目の届く範囲で。巣箱ひとつずつ確かめてから出せるのは、この大きさだからです。</p>
+        <div style="display:flex; gap:12px; align-items:center; margin-top:16px;">
+          <div style="width:52px;height:52px;border-radius:12px;overflow:hidden;flex:none;"><img src="assets/bee.jpg" alt="養蜂のようす" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <span style="font-size:13px;color:var(--brown-soft);">稲美町の、小さな養蜂場です。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. 季節と蜜の種類 -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">THE SEASONS</div>
+    <h2 class="sec">春の蜜と、秋の蜜は、<br>別のものです。</h2>
+    <p class="sec-lead">蜂が通う花は、季節でうつろいます。花が変われば、色も、香りも、甘さの質も変わります。どれが上ということはなく、好みが分かれるところです。</p>
+    <div class="honeys">
+      <div class="hcard"><div class="hbar"></div><h3>れんげ蜜</h3><p>少し酸味があって、まろやか。はちみつらしい甘さを覚えるなら、まずここから。</p></div>
+      <div class="hcard b"><div class="hbar"></div><h3>アカシア蜜</h3><p>あっさりとして食べやすい。毎日つづけて食べるのに向いています。</p></div>
+      <div class="hcard c"><div class="hbar"></div><h3>百花蜜</h3><p>いろいろな花から集めた蜜。その年の稲美町の景色が、そのまま味になります。</p></div>
+    </div>
+    <p style="text-align:center; margin-top:22px; font-size:13.5px; color:var(--brown-soft);">どの蜜がいつ採れるかは、その年の花と天候しだいです。</p>
+  </div>
+</section>
+
+<!-- 7. 食べ方 -->
+<section style="background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="eyebrow">HOW TO ENJOY</div>
+    <h2 class="sec">開けたら、まず、そのまま。</h2>
+    <p class="sec-lead">火を通すと、いちばん先に香りが逃げます。加熱をしていない蜜なので、仕上げに、食卓で。そのまま召し上がるのがいちばんです。</p>
+    <div class="enjoy">
+      <div class="ecard"><div class="ei">&#127838;</div><h4>朝のトーストに</h4><p>パンの香ばしさに、花の香りが重なります。バターの塩気があると、なおよく合います。</p></div>
+      <div class="ecard"><div class="ei">&#129348;</div><h4>そのまま、スプーンで</h4><p>香りをいちばん素直に受け取れる食べかた。蜜の違いを確かめたいときは、まずひとさじから。</p></div>
+      <div class="ecard"><div class="ei">&#129472;</div><h4>ヨーグルトに</h4><p>酸味に甘さが寄り添って、角がとれます。朝のひと皿がやわらかくなります。</p></div>
+    </div>
+    <p style="text-align:center; margin-top:18px; font-size:13px; color:var(--brown-soft);">花の種類によって、合う食べかたも少しずつ違います。火を入れて使うなら、香りの軽いアカシア蜜が向きます。</p>
+  </div>
+</section>
+
+<!-- 8. 商品と値段の理由 -->
+<section id="lineup">
+  <div class="wrap">
+    <div class="eyebrow">LINEUP &amp; PRICE</div>
+    <h2 class="sec">商品と、その値段の理由。</h2>
+    <p class="sec-lead">いまお出しできるのは、純粋はちみつの2サイズです。採れた分だけの、数量限定でお渡ししています。</p>
+    <div class="products">
+      <a class="pcard" href="https://yumihoney.shop-pro.jp" target="_blank" rel="noopener">
+        <div class="pphoto"><img src="assets/prod2.jpg" alt="純粋はちみつ 480g" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="pbody"><h3>純粋はちみつ 480g</h3><div class="vol">毎日つづけて食べる方に</div><div class="price">¥2,580<small> 税込</small></div><div class="unit">100gあたり 約538円</div></div>
+      </a>
+      <a class="pcard" href="https://yumihoney.shop-pro.jp" target="_blank" rel="noopener">
+        <div class="pphoto"><img src="assets/hero.jpg" alt="純粋はちみつ 270g" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="pbody"><h3>純粋はちみつ 270g</h3><div class="vol">はじめての一瓶に</div><div class="price">¥1,580<small> 税込</small></div><div class="unit">100gあたり 約585円</div></div>
+      </a>
+    </div>
+
+    <div class="reason">
+      <h3>安くできない理由を、隠さずに書いておきます。</h3>
+      <div class="ritem"><b>一．国産であること</b><p>日本で流通するはちみつのうち、国産はおよそ6%。数が少ないものは、そのぶん高くなります。</p></div>
+      <div class="ritem"><b>二．自然まかせであること</b><p>花の咲きかたも、天候も選べません。採れる量は年によって変わります。</p></div>
+      <div class="ritem"><b>三．手間がかかること</b><p>加熱をすれば蜜はさらさらになり、濾す作業も早く終わります。熱を加えないぶん、時間がかかります。</p></div>
+    </div>
+
+    <div class="shipbox">
+      <div class="sb-row"><span>送料</span><b>〔　地域別／◯円以上で送料無料　〕<span class="ph">※本人確認後に記載</span></b></div>
+      <div class="sb-row"><span>季節限定の蜜</span><b>みかん・栗蜜・クリーミー・みかんクリーミー・1kg<br><span class="sb-sub">採れる量が少なく、今季分は出てすぐに無くなりました。次のぶんは Instagram でご案内します。</span></b></div>
+    </div>
+
+    <div class="alert-baby">はちみつは、1歳未満のお子さまには与えないでください。（→ <a href="#faq">よくあるご質問</a>）</div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="eyebrow">Q &amp; A</div>
+    <h2 class="sec">買う前に、<br>気になることのすべて。</h2>
+    <div class="faqlist">
+
+      <details class="q" open>
+        <summary>白く固まってしまいました。カビですか？</summary>
+        <div class="a">カビではなく「結晶化」です。はちみつに含まれるブドウ糖の性質で、13〜14℃あたりでいちばん進みます。品質の良し悪しとは関係がなく、そのままお召し上がりいただけます。むしろ、混ぜ物のないはちみつほど起こりやすい現象です。</div>
+      </details>
+
+      <details class="q">
+        <summary>固まったものを、元に戻せますか？</summary>
+        <div class="a">40〜45℃くらいのぬるめの湯煎に、ゆっくり当ててください。熱いお湯で一気に溶かすと、香りが飛んでしまいます。急がずに、少しずつ戻すのがおすすめです。</div>
+      </details>
+
+      <details class="q">
+        <summary>保存はどうすればいいですか？</summary>
+        <div class="a">常温で、直射日光の当たらない場所に置いてください。冷蔵庫は、かえって結晶化を早めます。スプーンは、乾いたものをお使いください。</div>
+      </details>
+
+      <details class="q">
+        <summary>賞味期限はどのくらいですか？</summary>
+        <div class="a">〔ラベル記載の期限を転記〕を目安にしています。はちみつは糖度がおよそ80%と高く、雑菌が繁殖しにくい食品です。賞味期限は「おいしく食べられる」目安とお考えください。<br><span class="ph">※具体的な年数は本人確認後に記載します</span></div>
+      </details>
+
+      <details class="q">
+        <summary>小さな子どもに食べさせても大丈夫ですか？</summary>
+        <div class="a">1歳未満のお子さまには、与えないでください。これは加熱の有無にかかわらず、はちみつ全般に共通することです。熱を加えても防げないため、加熱調理に使ったものも同じく与えないでください。1歳を過ぎたお子さまには、問題ありません。</div>
+      </details>
+
+      <details class="q">
+        <summary>前に買ったものと、味が違う気がします。</summary>
+        <div class="a">はい、違います。蜜は巣箱ごと、季節ごとに味が変わります。均一にする加工をしていないためです。そのかわり、出荷前に糖度・香り・味を巣箱ひとつずつ確かめて、良い状態のものだけをお出ししています。「前のほうが好きだった」というときは、お気軽にお知らせください。次にお選びいただくときの参考にします。</div>
+      </details>
+
+      <details class="q">
+        <summary>贈りものにできますか？</summary>
+        <div class="a">〔のし・ラッピング・直送の可否を記載〕<br><span class="ph">※本人確認後に記載します</span></div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- 10. 購入導線 -->
+<section id="buy">
+  <div class="wrap">
+    <div class="eyebrow">NEXT JAR</div>
+    <h2 class="sec">次の蜜を、<br>見逃さないように。</h2>
+    <p class="sec-lead">瓶が空くころには、季節はもう次の花へ移っています。いまお出しできる蜜は、通販サイトでご覧いただけます。</p>
+    <div class="buyrow">
+      <a class="buybtn main" href="https://yumihoney.shop-pro.jp/" target="_blank" rel="noopener"><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4" fill="#fff"/><circle cx="18" cy="20" r="1.4" fill="#fff"/></svg></span><span>通販サイトで今の蜜を見る<span class="sub">yumihoney.shop-pro.jp</span></span></a>
+      <a class="buybtn" href="https://www.instagram.com/yumicyanhoney/" target="_blank" rel="noopener"><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke="#A8761A" stroke-width="1.7"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.4"/><circle cx="17" cy="7" r="1" fill="#A8761A"/></svg></span><span>Instagram で新しい蜜のお知らせを受け取る<span class="sub">@yumicyanhoney ／ 採れた蜜から、そのつどお知らせします</span></span></a>
+    </div>
+    <p style="text-align:center; margin-top:20px; font-size:13px; color:var(--brown-soft);">食べた感想は <strong style="color:var(--gold-deep);">#有美ちゃんの養蜂場</strong> で。みなさんの一枚が、次の誰かの楽しみになります。</p>
+  </div>
+</section>
+
+<!-- 11. 事業者情報 -->
+<div class="info">
+  <div class="wrap">
+    <h3 class="serif">有美ちゃんの養蜂場</h3>
+    <p>兵庫県 稲美町<br>2011年（平成23年）春より<br>Instagram @yumicyanhoney<br>通販 yumihoney.shop-pro.jp</p>
+  </div>
+</div>
+<footer class="site">© 有美ちゃんの養蜂場　／ ページ試作: CoreWorks<br><span style="font-size:11px;opacity:.8;">※一部の写真はWikimedia Commonsのフリー素材（CC0/CC BY等）の仮当てです。本番は実際のお写真に差し替えます。</span></footer>
+
+</body>
+</html>
