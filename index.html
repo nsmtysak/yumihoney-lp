@@ -141,6 +141,8 @@
   .cert-card .cert-tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px;}
   .cert-card .cert-tag{font-size:11px; font-weight:700; color:var(--gold-deep); background:#fff; border:1px solid var(--line); padding:3px 10px; border-radius:999px;}
   .cert-card .cert-link{display:inline-flex; align-items:center; gap:4px; margin-top:12px; font-size:13px; font-weight:800; color:var(--gold-deep);}
+  .cert-card.furusato{background:linear-gradient(135deg,#fff,#eef2e3); border-color:var(--leaf);}
+  .cert-card.furusato .cert-link{color:var(--leaf);}
   @media(max-width:680px){
     .enjoy{grid-template-columns:1fr 1fr;}
   }
@@ -215,10 +217,21 @@
       </div>
       <div class="cert-link">五つ星ひょうご公式サイトで見る &rarr;</div>
     </a>
-    <div class="badges" style="margin-top:14px;">
-      <span class="badge">&#127881; 稲美町ふるさと納税 返礼品</span>
-      <span class="ph-note" style="align-self:center;">※こちらは本人確認後に確定</span>
-    </div>
+    <a class="cert-card furusato" href="https://www.town.hyogo-inami.lg.jp/0000007053.html" target="_blank" rel="noopener" style="margin-top:16px;">
+      <div class="cert-top">
+        <span class="cert-star">&#127881;</span>
+        <div>
+          <div class="cert-name">稲美町 ふるさと納税 返礼品</div>
+          <div class="cert-sub">稲美町・官学連携 学生レポートで紹介</div>
+        </div>
+      </div>
+      <p class="cert-desc">稲美町のふるさと納税協力企業として、純粋はちみつが返礼品に選ばれています。町と大学の連携取材では、巣箱ごとに糖度や香りを確かめてから出荷する丁寧なものづくりが紹介されました。</p>
+      <div class="cert-tags">
+        <span class="cert-tag">ふるさと納税 協力企業</span>
+        <span class="cert-tag">稲美町 官学連携レポート</span>
+      </div>
+      <div class="cert-link">稲美町の紹介記事を見る &rarr;</div>
+    </a>
   </div>
 </section>
 
