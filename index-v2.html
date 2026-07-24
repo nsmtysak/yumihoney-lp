@@ -68,7 +68,7 @@
   .selfcheck .sc-ttl{font-size:14.5px; font-weight:800; color:var(--gold-deep); text-align:center; margin-bottom:14px;}
   .selfcheck .sc-row{display:flex; justify-content:space-between; align-items:baseline; gap:12px; font-size:14px; color:var(--brown-soft); padding:8px 0; border-bottom:1px dashed var(--line);}
   .selfcheck .sc-row b{color:var(--brown); font-size:15px; text-align:right;}
-  .selfcheck .sc-note{font-size:11.5px; color:#a08650; margin-top:10px; text-align:center;}
+  .selfcheck .sc-row:last-of-type{border-bottom:none;}
 
   /* 言わないと決めていること */
   .nosay{max-width:620px; margin:26px auto 0; background:var(--brown); color:#f2e7d6; border-radius:20px; padding:24px 26px;}
@@ -106,10 +106,10 @@
 
   /* 食べ方 */
   .enjoy{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; max-width:680px; margin:0 auto;}
-  .ecard{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:22px 14px; text-align:center;}
+  .ecard{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:22px 18px; text-align:center;}
   .ecard .ei{font-size:30px; line-height:1; margin-bottom:10px;}
-  .ecard h4{font-size:14.5px; color:var(--brown); margin-bottom:5px;}
-  .ecard p{font-size:12px; color:var(--brown-soft); line-height:1.75;}
+  .ecard h4{font-size:15px; color:var(--brown); margin-bottom:9px;}
+  .ecard p{font-size:12.5px; color:var(--brown-soft); line-height:1.95; text-align:left;}
 
   /* 商品 */
   .products{display:grid; grid-template-columns:1fr 1fr; gap:18px; max-width:560px; margin:0 auto;}
@@ -235,7 +235,7 @@
   <div class="wrap">
     <div class="eyebrow">HOW TO CHOOSE</div>
     <h2 class="sec">本物の見分けかたを、<br>先にお伝えします。</h2>
-    <p class="sec-lead">売る側が「本物です」と言っても、それだけでは確かめようがありません。ご自宅にある瓶で、いますぐ確かめられることを3つだけ書いておきます。</p>
+    <p class="sec-lead">売る側が「本物です」と言っても、それだけでは確かめようがありません。ご自宅にある瓶で、いますぐ確かめられることを2つだけ書いておきます。</p>
     <div class="clist">
 
       <div class="citem">
@@ -250,26 +250,18 @@
         <span class="src">出典：農林水産省「養蜂をめぐる情勢」</span>
       </div>
 
-      <div class="citem">
-        <span class="cnum">三</span><h3>「100gあたりの値段」を見る</h3>
-        <p>内容量はお店ごとにばらばらなので、値札のままでは比べられません。100gあたりに直すと、はじめて横に並びます。国産の純粋はちみつでは、100gあたり500円前後からがひとつの目安とされています。</p>
-        <span class="src">出典：はちみつの選び方を扱う比較メディアで広く使われる目安</span>
-      </div>
-
     </div>
 
     <div class="selfcheck">
-      <div class="sc-ttl">この3つを、うちの瓶に当ててみます。</div>
+      <div class="sc-ttl">この2つを、うちの瓶に当ててみます。</div>
       <div class="sc-row"><span>原材料名</span><b>はちみつ</b></div>
       <div class="sc-row"><span>原産国名</span><b>日本（兵庫県稲美町）</b></div>
-      <div class="sc-row"><span>100gあたり</span><b>約538円 〜 約585円</b></div>
-      <div class="sc-note">270g／1,580円＝約585円、480g／2,580円＝約538円（いずれも税込）</div>
     </div>
 
     <div class="nosay">
-      <div class="ns-ttl">はちみつ屋がよく使う言葉を、<br>ひとつだけ使いません。</div>
-      <p>「非加熱だから栄養価が高い」「酵素が生きている」——この言い方は、業界団体自身が否定しています。だから、うちでは申し上げません。</p>
-      <p>熱を加えないことで変わるのは、栄養ではなく<strong>香りと風味</strong>です。うちが加熱をしないのは、その香りを残したいから。それ以上のことは、言いません。</p>
+      <div class="ns-ttl">熱を加えないのは、<br>香りのためです。</div>
+      <p>うちが熱を加えないのは、<strong>香りのため</strong>です。加熱をすれば蜜はさらさらになり、濾す作業は早く終わります。それでも常温のまま濾すのは、火を通したときにいちばん先に消えるのが、花ごとの香りだからです。</p>
+      <p>だから、うちが申し上げられるのは香りと風味のことだけです。よく聞く「非加熱だから栄養が」という話は、業界団体自身が確かめられていないとしています。うちの言葉には入れていません。売り文句がひとつ減っても、そのほうがいいと思っています。</p>
     </div>
   </div>
 </section>
@@ -353,13 +345,13 @@
   <div class="wrap">
     <div class="eyebrow">HOW TO ENJOY</div>
     <h2 class="sec">開けたら、まず、そのまま。</h2>
-    <p class="sec-lead">火を通すと、いちばん先に香りが逃げます。加熱をしていない蜜なので、仕上げに、食卓で。そのまま召し上がるのがいちばんです。</p>
+    <p class="sec-lead">熱を加えると、いちばん先に逃げるのが香りです。加熱をしていない蜜ですから、鍋の中ではなく、食卓で。開けた日のいちばん香るところを、そのまま召し上がってください。</p>
     <div class="enjoy">
-      <div class="ecard"><div class="ei">&#127838;</div><h4>朝のトーストに</h4><p>パンの香ばしさに、花の香りが重なります。バターの塩気があると、なおよく合います。</p></div>
-      <div class="ecard"><div class="ei">&#129348;</div><h4>そのまま、スプーンで</h4><p>香りをいちばん素直に受け取れる食べかた。蜜の違いを確かめたいときは、まずひとさじから。</p></div>
-      <div class="ecard"><div class="ei">&#129379;</div><h4>ヨーグルトに</h4><p>酸味に甘さが寄り添って、角がとれます。朝のひと皿がやわらかくなります。</p></div>
+      <div class="ecard"><div class="ei">&#127838;</div><h4>焼きたてのトーストに</h4><p>焼き上がりの熱でとろりとゆるみ、パンの目に落ちていきます。バターを先に、蜜はそのあとから。かじるとまず塩気がきて、遅れて花の香りが追いかけてきます。</p></div>
+      <div class="ecard"><div class="ei">&#129348;</div><h4>まず、ひとさじ</h4><p>すくったスプーンを立てると、糸を引いてゆっくり落ちます。舌の上に置いて、溶けきるまで待ってみてください。甘さが引いたあとに、花の香りが鼻へ抜けていきます。</p></div>
+      <div class="ecard"><div class="ei">&#129379;</div><h4>冷たいヨーグルトに</h4><p>冷えたヨーグルトの上では、蜜は流れずに線のまま残ります。混ぜないで、白いところごとすくうのがおすすめです。ひと口目で酸味がすっと引いて、甘さだけが残ります。</p></div>
     </div>
-    <p style="text-align:center; margin-top:18px; font-size:13px; color:var(--brown-soft);">花の種類によって、合う食べかたも少しずつ違います。火を入れて使うなら、香りの軽いアカシア蜜が向きます。</p>
+    <p style="text-align:center; margin-top:18px; font-size:13px; color:var(--brown-soft);">花の種類によって、合う食べかたも少しずつ違います。火を入れて使うなら香りの軽いアカシア蜜を、れんげ蜜と百花蜜は火にかけず、最後にひとさじ。</p>
   </div>
 </section>
 
@@ -382,7 +374,7 @@
 
     <div class="reason">
       <h3>こだわっていることを、ぜんぶ書いておきます。</h3>
-      <div class="ritem"><b>一．国産であること</b><p>日本で流通するはちみつのうち、国産はおよそ6%。その6%を、稲美町でつくっています。</p></div>
+      <div class="ritem"><b>一．国産であること</b><p>日本で流通するはちみつのうち、国産はおよそ6%。その6%のなかの、さらに小さなひと粒が、稲美町のこの養蜂場です。</p></div>
       <div class="ritem"><b>二．自然まかせであること</b><p>花の咲きかたも、天候も選べません。採れる量は年によって変わります。</p></div>
       <div class="ritem"><b>三．手間がかかること</b><p>加熱をすれば蜜はさらさらになり、濾す作業も早く終わります。熱を加えないぶん、時間がかかります。</p></div>
     </div>
