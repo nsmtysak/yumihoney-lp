@@ -88,21 +88,27 @@
   .story-grid .img{border-radius:20px; overflow:hidden; height:300px;}
   .story-grid p{font-size:15px; color:var(--brown-soft);}
 
-  /* 蜜の種類 */
-  .honeys{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:680px; margin:0 auto;}
-  .hcard{background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:20px 18px; text-align:center;}
-  .hcard .hbar{width:34px; height:4px; border-radius:999px; margin:0 auto 12px; background:var(--gold);}
-  .hcard.b .hbar{background:var(--amber);}
-  .hcard.c .hbar{background:var(--gold-deep);}
-  .hcard h3{font-size:16px; color:var(--brown); margin-bottom:8px;}
-  .hcard p{font-size:13px; color:var(--brown-soft); line-height:1.85;}
+  /* 季節カレンダー */
+  .calwrap{background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:22px 18px 16px; max-width:680px; margin:0 auto;}
+  .calbar{height:6px; border-radius:999px; margin:2px 6px 4px; background:linear-gradient(90deg,#EBB14B,#D89A2B,#A8761A);}
+  .cal{display:grid; grid-template-columns:repeat(3,1fr); gap:0;}
+  .cal .cseg{text-align:center; padding:14px 9px 6px;}
+  .cal .cseg:not(:last-child){border-right:1px dashed var(--line);}
+  .cal .cdot{width:13px; height:13px; border-radius:50%; margin:0 auto 10px; background:var(--gold);}
+  .cal .cseg:nth-child(2) .cdot{background:var(--amber);}
+  .cal .cseg:nth-child(3) .cdot{background:var(--gold-deep);}
+  .cal .cseason{font-weight:800; color:var(--gold-deep); font-size:12.5px; letter-spacing:.08em; margin-bottom:6px;}
+  .cal .cname{font-size:15.5px; font-weight:800; color:var(--brown); margin-bottom:7px;}
+  .cal .ctaste{font-size:12px; color:var(--brown-soft); line-height:1.8; text-align:left;}
+  .calnote{text-align:center; margin-top:10px;}
 
   /* 食べ方 */
   .enjoy{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; max-width:680px; margin:0 auto;}
-  .ecard{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:22px 18px; text-align:center;}
-  .ecard .ei{font-size:30px; line-height:1; margin-bottom:10px;}
-  .ecard h4{font-size:15px; color:var(--brown); margin-bottom:9px;}
-  .ecard p{font-size:12.5px; color:var(--brown-soft); line-height:1.95; text-align:left;}
+  .ecard{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:20px 18px;}
+  .ecard .ehead{display:flex; align-items:center; gap:12px; margin-bottom:11px;}
+  .ecard .ei{font-size:26px; line-height:1; flex:none;}
+  .ecard h4{font-size:15px; color:var(--brown);}
+  .ecard p{font-size:12.5px; color:var(--brown-soft); line-height:1.95;}
 
   /* 商品 */
   .products{display:grid; grid-template-columns:1fr 1fr; gap:18px; max-width:560px; margin:0 auto;}
@@ -164,7 +170,10 @@
 
   @media(max-width:680px){
     .kodawari{grid-template-columns:1fr;}
-    .honeys{grid-template-columns:1fr;}
+    .calwrap{padding:18px 8px 14px;}
+    .cal .cseg{padding:12px 6px 4px;}
+    .cal .cname{font-size:13.5px;}
+    .cal .ctaste{font-size:10.5px; line-height:1.7;}
     .enjoy{grid-template-columns:1fr;}
     .story-grid{grid-template-columns:1fr;}
     .story-grid .img{height:210px;}
@@ -209,7 +218,7 @@
     <div class="kodawari">
       <div class="kbox">
         <h3>香りのために、<br>常温のまま濾します。</h3>
-        <p>加熱は、たくさんの量をむらなく早く扱うための工程です。うちは採れたてを常温のまま、ただ濾すだけ。時間をかけるぶん、いちばん繊細な香りが、そのまま瓶の中に残ります。</p>
+        <p>加熱は、たくさんの量をむらなく早く扱うための工程です。私たちは採れたてを常温のまま、ただ濾すだけ。時間をかけるぶん、いちばん繊細な香りが、そのまま瓶の中に残ります。</p>
       </div>
       <div class="kbox">
         <h3>巣箱ひとつずつ、<br>確かめてから。</h3>
@@ -247,8 +256,8 @@
 
     <div class="nosay">
       <div class="ns-ttl">熱を加えないのは、<br>香りのためです。</div>
-      <p>うちが守りたいのは、<strong>花ごとの香り</strong>です。だから採れたての蜜を、常温のまま、ただ濾して瓶に詰めます。時間のかかる方法ですが、その手間のぶんだけ、香りが瓶の中に残ります。</p>
-      <p>瓶を開けたときに、その季節の花がふっと立ちのぼること。私たちが申し上げるのは、この一点だけです。香りのために、常温のまま。うちのこだわりは、そこに尽きます。</p>
+      <p>私たちが守りたいのは、<strong>花ごとの香り</strong>です。だから採れたての蜜を、常温のまま、ただ濾して瓶に詰めます。時間のかかる方法ですが、その手間のぶんだけ、香りが瓶の中に残ります。</p>
+      <p>瓶を開けたときに、その季節の花がふっと立ちのぼること。私たちが申し上げるのは、この一点だけです。香りのために、常温のまま。こだわりは、そこに尽きます。</p>
     </div>
   </div>
 </section>
@@ -318,10 +327,29 @@
     <div class="eyebrow">THE SEASONS</div>
     <h2 class="sec">春の蜜と、秋の蜜は、<br>別のものです。</h2>
     <p class="sec-lead">蜂が通う花は、季節でうつろいます。花が変われば、色も、香りも、甘さの質も変わります。どれにもその季節ならではの良さがあって、好みが分かれるところです。</p>
-    <div class="honeys">
-      <div class="hcard"><div class="hbar"></div><h3>れんげ蜜</h3><p>少し酸味があって、まろやか。はちみつらしい甘さを覚えるなら、まずここから。</p></div>
-      <div class="hcard b"><div class="hbar"></div><h3>アカシア蜜</h3><p>あっさりとして食べやすい。毎日つづけて食べるのに向いています。</p></div>
-      <div class="hcard c"><div class="hbar"></div><h3>百花蜜</h3><p>いろいろな花から集めた蜜。その年の稲美町の景色が、そのまま味になります。</p></div>
+    <div class="calwrap">
+      <div class="calbar"></div>
+      <div class="cal">
+        <div class="cseg">
+          <div class="cdot"></div>
+          <div class="cseason">春</div>
+          <div class="cname">れんげ蜜</div>
+          <div class="ctaste">少し酸味があって、まろやか。はちみつらしい甘さを覚えるなら、まずここから。</div>
+        </div>
+        <div class="cseg">
+          <div class="cdot"></div>
+          <div class="cseason">初夏</div>
+          <div class="cname">アカシア蜜</div>
+          <div class="ctaste">あっさりとして食べやすい。毎日つづけて食べるのに向いています。</div>
+        </div>
+        <div class="cseg">
+          <div class="cdot"></div>
+          <div class="cseason">夏〜秋</div>
+          <div class="cname">百花蜜</div>
+          <div class="ctaste">いろいろな花から集めた蜜。その年の稲美町の景色が、そのまま味になります。</div>
+        </div>
+      </div>
+      <div class="calnote"><span class="ph-note">※季節と蜜の対応は本人確認後に確定</span></div>
     </div>
     <p style="text-align:center; margin-top:22px; font-size:13.5px; color:var(--brown-soft);">その年の花と天候しだいで、蜜の顔は毎年変わります。だからこの一瓶は、<strong style="color:var(--gold-deep);">一期一会</strong>。糖度と香りを巣箱ごとに確かめてお渡しするのは、その一度きりを、いちばん良い状態でお届けしたいからです。</p>
   </div>
@@ -334,9 +362,9 @@
     <h2 class="sec">開けたら、まず、そのまま。</h2>
     <p class="sec-lead">香りは、熱に会うといちばん先に飛んでいきます。常温のまま瓶に詰めた蜜ですから、仕上げに、食卓で。開けた日のいちばん香るところを、そのまま召し上がってください。</p>
     <div class="enjoy">
-      <div class="ecard"><div class="ei">&#127838;</div><h4>焼きたてのトーストに</h4><p>焼き上がりの熱でとろりとゆるみ、パンの目に落ちていきます。バターを先に、蜜はそのあとから。かじるとまず塩気がきて、遅れて花の香りが追いかけてきます。</p></div>
-      <div class="ecard"><div class="ei">&#129348;</div><h4>まず、ひとさじ</h4><p>すくったスプーンを立てると、糸を引いてゆっくり落ちます。舌の上に置いて、溶けきるまで待ってみてください。甘さが引いたあとに、花の香りが鼻へ抜けていきます。</p></div>
-      <div class="ecard"><div class="ei">&#129379;</div><h4>冷たいヨーグルトに</h4><p>冷えたヨーグルトの上では、蜜は線のまま、白い上にとどまります。白いところごと、そのまますくってみてください。ひと口目で酸味がすっと引いて、甘さだけが残ります。</p></div>
+      <div class="ecard"><div class="ehead"><span class="ei">&#127838;</span><h4>焼きたてのトーストに</h4></div><p>焼き上がりの熱でとろりとゆるみ、パンの目に落ちていきます。バターを先に、蜜はそのあとから。かじるとまず塩気がきて、遅れて花の香りが追いかけてきます。</p></div>
+      <div class="ecard"><div class="ehead"><span class="ei">&#129348;</span><h4>まず、ひとさじ</h4></div><p>すくったスプーンを立てると、糸を引いてゆっくり落ちます。舌の上に置いて、溶けきるまで待ってみてください。甘さが引いたあとに、花の香りが鼻へ抜けていきます。</p></div>
+      <div class="ecard"><div class="ehead"><span class="ei">&#129379;</span><h4>冷たいヨーグルトに</h4></div><p>冷えたヨーグルトの上では、蜜は線のまま、白い上にとどまります。白いところごと、そのまますくってみてください。ひと口目で酸味がすっと引いて、甘さだけが残ります。</p></div>
     </div>
     <p style="text-align:center; margin-top:18px; font-size:13px; color:var(--brown-soft);">花の種類によって、合う食べかたも少しずつ違います。火を入れて使うなら香りの軽いアカシア蜜を、れんげ蜜と百花蜜は、仕上げの最後のひとさじで。</p>
   </div>
