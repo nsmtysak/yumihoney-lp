@@ -159,6 +159,11 @@
   .buybtn.main .bi{background:rgba(255,255,255,.22);}
   .buybtn.main .sub{color:#fff6e4;}
 
+  /* セクション写真 */
+  .secphoto{border-radius:20px; overflow:hidden; margin:0 auto 28px; max-width:680px;}
+  .secphoto img{width:100%; height:100%; object-fit:cover; display:block;}
+  .secphoto .cap{display:block; text-align:center; font-size:12px; color:var(--brown-soft); margin-top:9px;}
+
   /* 実店舗 */
   .stores{display:flex; flex-wrap:wrap; gap:9px; justify-content:center; max-width:620px; margin:0 auto;}
   .store{display:inline-flex; align-items:center; gap:6px; background:#fff; border:1px solid var(--line); color:var(--brown); font-weight:700; font-size:13px; padding:9px 16px; border-radius:999px;}
@@ -177,6 +182,7 @@
   @media(max-width:680px){
     .kodawari{grid-template-columns:1fr;}
     .pcard .pphoto{height:170px;}
+    .secphoto{height:200px !important;}
     .calwrap{padding:18px 8px 14px;}
     .cal .cseg{padding:12px 6px 4px;}
     .cal .cname{font-size:13.5px;}
@@ -313,7 +319,7 @@
 <section style="background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="wrap">
     <div class="story-grid">
-      <div class="img"><img src="assets/flower.jpg" alt="花からミツバチが蜜を集める" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+      <div class="img"><img src="assets/bee-flower.jpg" alt="菜の花にとまったみつばち" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
       <div>
         <div class="eyebrow" style="text-align:left;">SINCE 2011 ・ FROM INAMI-CHO</div>
         <h2 class="sec" style="text-align:left;">はじまりは、<br>いただいた一瓶でした。</h2>
@@ -335,6 +341,7 @@
     <div class="eyebrow">THE SEASONS</div>
     <h2 class="sec">蜜が採れるのは、<br>春から初夏の、ひと月半です。</h2>
     <p class="sec-lead">蜜が採れるのは、4月の末から6月のはじめにかけて。そのひと月あまりのあいだにも、蜂が通う花は次々と入れ替わります。花が変われば、色も、香りも、甘さの質も変わります。どれにもその時期ならではの良さがあって、好みが分かれるところです。</p>
+    <div class="secphoto" style="height:280px;"><img src="assets/renge.jpg" alt="一面に咲いたれんげの畑"></div>
     <div class="calwrap">
       <div class="calbar"></div>
       <div class="cal">
@@ -390,6 +397,7 @@
     <div class="eyebrow">LINEUP &amp; PRICE</div>
     <h2 class="sec">商品と、そのつくりかた。</h2>
     <p class="sec-lead">いまお出しできるのは、純粋はちみつの3サイズと、巣蜜入りはちみつです。採れた分だけの、数量限定でお渡ししています。</p>
+    <div class="secphoto" style="height:300px; max-width:560px;"><img src="assets/lineup.jpg" alt="純粋はちみつ 270g・480g・1kg の3サイズ"></div>
     <div class="products">
       <a class="pcard" href="https://yumihoney.shop-pro.jp" target="_blank" rel="noopener">
         <div class="pphoto"><img src="assets/hero.jpg" alt="純粋はちみつ 270g" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
