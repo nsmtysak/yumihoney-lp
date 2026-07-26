@@ -69,7 +69,6 @@
   .nosay p{font-size:14px; line-height:1.95; color:#ddccb4;}
   .nosay p + p{margin-top:10px;}
   .nosay strong{color:var(--amber);}
-  .nosay .ph-dark{display:inline-block; font-size:10.5px; color:#e8cf9d; border:1px dashed #8a6f45; border-radius:6px; padding:1px 7px; margin:0 4px; vertical-align:2px;}
 
   /* 認定カード */
   .cert-card{display:block; text-decoration:none; color:inherit; max-width:460px; margin:0 auto 16px; background:linear-gradient(135deg,#fff,var(--cream2)); border:1.5px solid var(--gold); border-radius:18px; padding:18px 20px; box-shadow:0 10px 22px -14px rgba(168,118,26,.55);}
@@ -92,12 +91,13 @@
   /* 季節カレンダー */
   .calwrap{background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:22px 18px 16px; max-width:680px; margin:0 auto;}
   .calbar{height:6px; border-radius:999px; margin:2px 6px 4px; background:linear-gradient(90deg,#EBB14B,#D89A2B,#A8761A);}
-  .cal{display:grid; grid-template-columns:repeat(3,1fr); gap:0;}
+  .cal{display:grid; grid-template-columns:repeat(4,1fr); gap:0;}
   .cal .cseg{text-align:center; padding:14px 9px 6px;}
   .cal .cseg:not(:last-child){border-right:1px dashed var(--line);}
   .cal .cdot{width:13px; height:13px; border-radius:50%; margin:0 auto 10px; background:var(--gold);}
-  .cal .cseg:nth-child(2) .cdot{background:var(--amber);}
-  .cal .cseg:nth-child(3) .cdot{background:var(--gold-deep);}
+  .cal .cseg:nth-child(2) .cdot{background:#E5A93C;}
+  .cal .cseg:nth-child(3) .cdot{background:#C68A26;}
+  .cal .cseg:nth-child(4) .cdot{background:var(--gold-deep);}
   .cal .cseason{font-weight:800; color:var(--gold-deep); font-size:12.5px; letter-spacing:.08em; margin-bottom:6px;}
   .cal .cname{font-size:15.5px; font-weight:800; color:var(--brown); margin-bottom:7px;}
   .cal .ctaste{font-size:12px; color:var(--brown-soft); line-height:1.8; text-align:left;}
@@ -158,6 +158,11 @@
   .buybtn.main{background:var(--gold); color:#fff; border-color:var(--gold);}
   .buybtn.main .bi{background:rgba(255,255,255,.22);}
   .buybtn.main .sub{color:#fff6e4;}
+
+  /* 実店舗 */
+  .stores{display:flex; flex-wrap:wrap; gap:9px; justify-content:center; max-width:620px; margin:0 auto;}
+  .store{display:inline-flex; align-items:center; gap:6px; background:#fff; border:1px solid var(--line); color:var(--brown); font-weight:700; font-size:13px; padding:9px 16px; border-radius:999px;}
+  .store::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--gold); flex:none;}
 
   /* info */
   .info{background:var(--brown); color:#f0e4d2; text-align:center;}
@@ -258,9 +263,7 @@
     <div class="nosay">
       <div class="ns-ttl">香りのために、<br>非加熱です。</div>
       <p>私たちの蜜は、<strong>非加熱</strong>です。採れたてを常温のまま、ただ濾して瓶に詰めます。加熱をすれば作業は早く進みますが、いちばん先に軽くなるのが香りです。だから私たちは、時間のかかるほうを選んでいます。</p>
-      <p>冬のあいだだけ、温度を見ています。寒さが進むと蜜は固くしまり、瓶へ移すのに力が要るようになるからです。そこで温度を合わせるのは、蜜を置いておく場所のほうです。〔設定温度を記載〕<span class="ph-dark">※本人確認後に記載</span>という低い温度で、時間をかけて、やわらかさだけを戻します。</p>
-      <p>火を通す加熱と、冬に場所の温度をそろえておくことは、別のしごとです。前者は香りを軽くし、後者は香りをそのままに、蜜を瓶へ運びます。私たちが使うのは、後者だけです。</p>
-      <p>瓶を開けたときに、その季節の花がふっと立ちのぼること。私たちが申し上げるのは、この一点だけです。香りのために、非加熱で。冬は、低い温度で見守って。こだわりは、そこに尽きます。</p>
+      <p>瓶を開けたときに、その季節の花がふっと立ちのぼること。私たちが申し上げるのは、この一点だけです。香りのために、非加熱で。こだわりは、そこに尽きます。</p>
     </div>
   </div>
 </section>
@@ -315,6 +318,7 @@
         <h2 class="sec" style="text-align:left;">はじまりは、<br>いただいた一瓶でした。</h2>
         <p>平成23年の春。知り合いの養蜂家の方からいただいた一瓶の、味と香りに驚きました。「こんなに美味しいハチミツを、自分で作ってみたい」。そう思ったことが、有美ちゃんの養蜂場のはじまりです。</p>
         <p style="margin-top:12px;">いまも会社勤めのかたわら、家族3人で続けています。蜂の世話をするのが主人と義父、お渡しするのが私。大きくするより、目の届く範囲で。巣箱ひとつずつ確かめてから出せるのは、この大きさだからです。</p>
+        <p style="margin-top:12px;">私たちの蜂は、稲美メロンの受粉にも通っています。稲美メロン部会の小山菜園さんのもとで、花から花へと回る役目です。いろいろな種類の蜂がいるなかで、みつばちは職人さんのようにきれいに受粉してくれるそうで、そのぶん形の整ったメロンになると聞きました。瓶の中の蜜も、町の畑のメロンも、同じ蜂たちの仕事です。</p>
         <div style="display:flex; gap:12px; align-items:center; margin-top:16px;">
           <div style="width:52px;height:52px;border-radius:12px;overflow:hidden;flex:none;"><img src="assets/bee.jpg" alt="養蜂のようす" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
           <span style="font-size:13px;color:var(--brown-soft);">稲美町の、小さな養蜂場です。</span>
@@ -328,33 +332,39 @@
 <section>
   <div class="wrap">
     <div class="eyebrow">THE SEASONS</div>
-    <h2 class="sec">春の蜜と、秋の蜜は、<br>別のものです。</h2>
-    <p class="sec-lead">蜂が通う花は、季節でうつろいます。花が変われば、色も、香りも、甘さの質も変わります。どれにもその季節ならではの良さがあって、好みが分かれるところです。</p>
+    <h2 class="sec">蜜が採れるのは、<br>春から初夏の、ひと月半です。</h2>
+    <p class="sec-lead">蜜が採れるのは、4月の末から6月のはじめにかけて。そのひと月あまりのあいだにも、蜂が通う花は次々と入れ替わります。花が変われば、色も、香りも、甘さの質も変わります。どれにもその時期ならではの良さがあって、好みが分かれるところです。</p>
     <div class="calwrap">
       <div class="calbar"></div>
       <div class="cal">
         <div class="cseg">
           <div class="cdot"></div>
-          <div class="cseason">春</div>
+          <div class="cseason">4月末</div>
           <div class="cname">れんげ蜜</div>
           <div class="ctaste">少し酸味があって、まろやか。はちみつらしい甘さを覚えるなら、まずここから。</div>
         </div>
         <div class="cseg">
           <div class="cdot"></div>
-          <div class="cseason">初夏</div>
+          <div class="cseason">5月中旬</div>
           <div class="cname">アカシア蜜</div>
-          <div class="ctaste">あっさりとして食べやすい。毎日つづけて食べるのに向いています。</div>
+          <div class="ctaste">あっさりとして食べやすい味。毎日つづけて食べるのに向いています。</div>
         </div>
         <div class="cseg">
           <div class="cdot"></div>
-          <div class="cseason">夏〜秋</div>
+          <div class="cseason">5月末</div>
+          <div class="cname">ヘアリーベッチ蜜</div>
+          <div class="ctaste">その年の天候しだいで出会える、5月末の蜜。味は〔味の説明を記載〕。</div>
+        </div>
+        <div class="cseg">
+          <div class="cdot"></div>
+          <div class="cseason">6月上旬</div>
           <div class="cname">百花蜜</div>
           <div class="ctaste">いろいろな花から集めた蜜。その年の稲美町の景色が、そのまま味になります。</div>
         </div>
       </div>
-      <div class="calnote"><span class="ph-note">※季節と蜜の対応は本人確認後に確定</span></div>
     </div>
-    <p style="text-align:center; margin-top:22px; font-size:13.5px; color:var(--brown-soft);">その年の花と天候しだいで、蜜の顔は毎年変わります。だからこの一瓶は、<strong style="color:var(--gold-deep);">一期一会</strong>。糖度と香りを巣箱ごとに確かめてお渡しするのは、その一度きりを、いちばん良い状態でお届けしたいからです。</p>
+    <p style="text-align:center; margin-top:22px; font-size:13.5px; color:var(--brown-soft); max-width:620px; margin-left:auto; margin-right:auto;">れんげ、アカシア、ヘアリーベッチの3つは、その年の天候しだいで採れ高が決まります。今年は、春の嵐がヘアリーベッチの花をさらっていきました。瓶に入るのは、その年に咲いた花の、そのままの記録です。</p>
+    <p style="text-align:center; margin-top:16px; font-size:13.5px; color:var(--brown-soft);">その年の花と天候しだいで、蜜の顔は毎年変わります。だからこの一瓶は、<strong style="color:var(--gold-deep);">一期一会</strong>。糖度と香りを巣箱ごとに確かめてお渡しするのは、その一度きりを、いちばん良い状態でお届けしたいからです。</p>
   </div>
 </section>
 
@@ -378,28 +388,40 @@
   <div class="wrap">
     <div class="eyebrow">LINEUP &amp; PRICE</div>
     <h2 class="sec">商品と、そのつくりかた。</h2>
-    <p class="sec-lead">いまお出しできるのは、純粋はちみつの2サイズです。採れた分だけの、数量限定でお渡ししています。</p>
+    <p class="sec-lead">いまお出しできるのは、純粋はちみつの3サイズと、巣蜜入りはちみつです。採れた分だけの、数量限定でお渡ししています。</p>
     <div class="products">
       <a class="pcard" href="https://yumihoney.shop-pro.jp" target="_blank" rel="noopener">
-        <div class="pphoto"><img src="assets/prod2.jpg" alt="純粋はちみつ 480g" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-        <div class="pbody"><h3>純粋はちみつ 480g</h3><div class="vol">毎日つづけて食べる方に</div><div class="price">¥2,580<small> 税込</small></div><div class="unit">100gあたり 約538円</div></div>
+        <div class="pphoto"><img src="assets/hero.jpg" alt="純粋はちみつ 270g" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="pbody"><h3>純粋はちみつ 270g</h3><div class="vol">はじめての一瓶に</div><div class="price">¥1,680<small> 税込</small></div><div class="unit">100gあたり 約622円</div></div>
       </a>
       <a class="pcard" href="https://yumihoney.shop-pro.jp" target="_blank" rel="noopener">
-        <div class="pphoto"><img src="assets/hero.jpg" alt="純粋はちみつ 270g" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-        <div class="pbody"><h3>純粋はちみつ 270g</h3><div class="vol">はじめての一瓶に</div><div class="price">¥1,580<small> 税込</small></div><div class="unit">100gあたり 約585円</div></div>
+        <div class="pphoto"><img src="assets/prod2.jpg" alt="純粋はちみつ 480g" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="pbody"><h3>純粋はちみつ 480g</h3><div class="vol">毎日つづけて食べる方に</div><div class="price">¥2,760<small> 税込</small></div><div class="unit">100gあたり 575円</div></div>
+      </a>
+      <a class="pcard" href="https://yumihoney.shop-pro.jp" target="_blank" rel="noopener">
+        <div class="pphoto"><img src="assets/prod1.jpg" alt="純粋はちみつ 1kg" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="pbody"><h3>純粋はちみつ 1kg</h3><div class="vol">ご家族で、たっぷりと</div><div class="price">¥5,380<small> 税込</small></div><div class="unit">100gあたり 538円</div></div>
+      </a>
+      <a class="pcard" href="https://yumihoney.shop-pro.jp" target="_blank" rel="noopener">
+        <div class="pphoto"><img src="assets/comb.jpg" alt="巣蜜入りはちみつ" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="pbody"><h3>巣蜜入りはちみつ</h3><div class="vol">食べられる蜂の巣です。蜜蝋の巣ごと、そのままお召し上がりいただく数量限定の一瓶。</div><div class="price">¥4,380<small> 税込</small></div></div>
       </a>
     </div>
+    <p style="max-width:560px; margin:16px auto 0; font-size:13px; color:var(--brown-soft); line-height:1.9;">お客様から「パンにのせて温めたら、溶けておいしかった」と教えていただきました。かじると、まず蜜の甘さが広がります。最後に蜜蝋が口の中に残りますので、そこはガムのように、お口から出していただいてかまいません。</p>
 
     <div class="reason">
       <h3>こだわっていることを、ぜんぶ書いておきます。</h3>
       <div class="ritem"><b>一．国産であること</b><p>日本で流通するはちみつのうち、国産はおよそ6%。その6%のなかの、さらに小さなひと粒が、稲美町のこの養蜂場です。</p></div>
-      <div class="ritem"><b>二．自然まかせであること</b><p>その年の花の咲きかたと天候が、そのまま採れ高になります。採れた分だけを、その年のお渡し分としています。</p></div>
-      <div class="ritem"><b>三．手間をかけること</b><p>常温のまま、時間をかけてゆっくり濾します。手間をかけるぶん、香りがそのまま瓶に残ります。</p></div>
+      <div class="ritem"><b>二．採れたその日に、瓶へ詰めること</b><p>採れた蜜は、その日のうちに瓶へ移します。缶で寝かせる時間の代わりに、採れたてのまま瓶の中へ。見込みで詰めていくので、1kgや480gが先に売り切れることもあります。</p></div>
+      <div class="ritem"><b>三．抗生剤不使用と、検査のこと</b><p>蜂を育てるところから、抗生剤不使用でやっています。採れた蜜は、残留農薬検査とグリホサート検査を受けています。していることを、そのまま書いておきます。</p></div>
+      <div class="ritem"><b>四．自然まかせであること</b><p>その年の花の咲きかたと天候が、そのまま採れ高になります。採れた分だけを、その年のお渡し分としています。</p></div>
+      <div class="ritem"><b>五．手間をかけること</b><p>常温のまま、時間をかけてゆっくり濾します。手間をかけるぶん、香りがそのまま瓶に残ります。</p></div>
     </div>
 
     <div class="shipbox">
-      <div class="sb-row"><span>送料</span><b>10,000円以上のご購入で無料<br><span class="sb-sub">10,000円未満のご購入は、〔地域別の金額〕を送料としていただきます。<span class="ph">※金額は本人確認後に記載</span></span></b></div>
-      <div class="sb-row"><span>季節限定の蜜</span><b>みかん・栗蜜・クリーミー・みかんクリーミー・1kg<br><span class="sb-sub">採れる量が少なく、今季分は出てすぐに完売しました。次のぶんは Instagram でご案内します。</span></b></div>
+      <div class="sb-row"><span>送料</span><b>全国一律 650円<br><span class="sb-sub">10,000円以上のご購入で送料無料。お届け先へ直接お送りすることもできます。</span></b></div>
+      <div class="sb-row"><span>賞味期限</span><b>2年<br><span class="sb-sub">「おいしく食べられる」目安です。常温で保存してください。</span></b></div>
+      <div class="sb-row"><span>季節限定の蜜</span><b>みかん・栗蜜・クリーミー・みかんクリーミー<br><span class="sb-sub">採れる量が少なく、今季分は出てすぐに完売しました。次のぶんは Instagram でご案内します。</span></b></div>
     </div>
 
     <div class="alert-baby">はちみつは、1歳未満のお子さまには与えないでください。（→ <a href="#faq">よくあるご質問</a>）</div>
@@ -415,12 +437,12 @@
 
       <details class="q" open>
         <summary>白く固まってきました。これはなんですか？</summary>
-        <div class="a">「結晶化」といって、はちみつに含まれるブドウ糖の性質で起こるものです。13〜14℃あたりでいちばん進みます。品質はそのままですので、そのままお召し上がりいただけます。純粋なはちみつほど起こりやすい、自然な現象です。</div>
+        <div class="a">「結晶化」といって、はちみつに含まれるブドウ糖の性質で起こるものです。13〜14℃あたりでいちばん進みます。品質はそのままですので、そのままお召し上がりいただけます。混ぜ物のないはちみつでも起こる、自然な現象です。</div>
       </details>
 
       <details class="q">
         <summary>固まったものを、元に戻せますか？</summary>
-        <div class="a">40〜45℃くらいのぬるめの湯煎に、ゆっくり当ててください。時間をかけて少しずつ戻すほど、香りがそのまま残ります。</div>
+        <div class="a">45℃くらいのぬるめの湯煎に、ゆっくり当ててください。時間をかけて少しずつ戻すほど、香りがそのまま残ります。<br>ひと瓶まるごと溶かすとなると、半日ほどかかります。すぐお使いになる分だけ、小さな器に取り分けて湯煎するほうが手軽です。</div>
       </details>
 
       <details class="q">
@@ -430,7 +452,7 @@
 
       <details class="q">
         <summary>賞味期限はどのくらいですか？</summary>
-        <div class="a">〔ラベル記載の期限を転記〕を目安にしています。はちみつは糖度がおよそ80%と高く、日もちのする食品です。賞味期限は「おいしく食べられる」目安とお考えください。<br><span class="ph">※具体的な年数は本人確認後に記載します</span></div>
+        <div class="a">2年を目安にしています。はちみつは糖度がおよそ80%と高く、日もちのする食品です。賞味期限は「おいしく食べられる」目安とお考えください。</div>
       </details>
 
       <details class="q">
@@ -445,7 +467,7 @@
 
       <details class="q">
         <summary>贈りものにできますか？</summary>
-        <div class="a">〔のし・ラッピング・直送の可否を記載〕<br><span class="ph">※本人確認後に記載します</span></div>
+        <div class="a">はい、ラッピングを承っています。贈り先へ直接お送りすることもできますので、ご注文の際にお申しつけください。</div>
       </details>
 
     </div>
@@ -466,7 +488,28 @@
   </div>
 </section>
 
-<!-- 11. 事業者情報 -->
+<!-- 11. 実店舗 -->
+<section style="background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="eyebrow">IN STORES</div>
+    <h2 class="sec">近くのお店でも、<br>手に取っていただけます。</h2>
+    <p class="sec-lead">稲美町とその周りの10か所で、私たちの瓶を置いていただいています。直売所やスーパーの棚に並んでいますので、実物を見て、重さを持って、その日にある蜜からお選びいただけます。並ぶ種類と数はお店ごとに変わりますので、お目当てがあるときは、お店にお尋ねください。</p>
+    <div class="stores">
+      <span class="store">JAいなみ</span>
+      <span class="store">にじいろファーミン</span>
+      <span class="store">JAかんき</span>
+      <span class="store">JA高砂</span>
+      <span class="store">JAやはた</span>
+      <span class="store">JA二見</span>
+      <span class="store">JA魚住</span>
+      <span class="store">ヤマダストアー北野</span>
+      <span class="store">ヤマダストアー阿弥陀</span>
+      <span class="store">ナナファーム</span>
+    </div>
+  </div>
+</section>
+
+<!-- 12. 事業者情報 -->
 <div class="info">
   <div class="wrap">
     <h3 class="serif">有美ちゃんの養蜂場</h3>
