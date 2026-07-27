@@ -170,8 +170,9 @@
 
   /* 実店舗 */
   .stores{display:flex; flex-wrap:wrap; gap:9px; justify-content:center; max-width:620px; margin:0 auto;}
-  .store{display:inline-flex; align-items:center; gap:6px; background:#fff; border:1px solid var(--line); color:var(--brown); font-weight:700; font-size:13px; padding:9px 16px; border-radius:999px;}
-  .store::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--gold); flex:none;}
+  .store{display:inline-flex; align-items:center; gap:7px; background:#fff; border:1px solid var(--line); color:var(--brown); font-weight:700; font-size:13px; padding:9px 16px; border-radius:999px; text-decoration:none; transition:background .15s, border-color .15s;}
+  .store::before{content:""; width:13px; height:13px; flex:none; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23A8761A'%3E%3Cpath d='M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E") no-repeat center/contain;}
+  .store:hover{background:var(--cream2); border-color:var(--gold);}
 
   /* info */
   .info{background:var(--brown); color:#f0e4d2; text-align:center;}
@@ -221,7 +222,7 @@
     <a class="sub-link" href="#choose">はちみつの選びかたから読む &darr;</a>
   </div>
   <div class="wrap" style="max-width:760px; padding:0;">
-    <div class="hero-photo" style="margin:34px 22px 0; height:360px; overflow:hidden;"><img src="assets/011.jpg" alt="採れたての蜜を濾しているところ" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+    <div class="hero-photo" style="margin:34px 22px 0; height:360px; overflow:hidden;"><img src="assets/top.jpg" alt="濾し器に流れ落ちる採れたての蜜" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
   </div>
 </div>
 
@@ -505,18 +506,18 @@
   <div class="wrap">
     <div class="eyebrow">IN STORES</div>
     <h2 class="sec">近くのお店でも、<br>手に取っていただけます。</h2>
-    <p class="sec-lead">稲美町とその周りの10か所で、私たちの瓶を置いていただいています。直売所やスーパーの棚に並んでいますので、実物を見て、重さを持って、その日にある蜜からお選びいただけます。並ぶ種類と数はお店ごとに変わりますので、お目当てがあるときは、お店にお尋ねください。</p>
+    <p class="sec-lead">稲美町とその周りの10か所で、私たちの瓶を置いていただいています。直売所やスーパーの棚に並んでいますので、実物を見て、重さを持って、その日にある蜜からお選びいただけます。並ぶ種類と数はお店ごとに変わりますので、お目当てがあるときは、お店にお尋ねください。店名をタップすると、地図が開きます。</p>
     <div class="stores">
-      <span class="store">JAいなみ</span>
-      <span class="store">にじいろファーミン</span>
-      <span class="store">JAかんき</span>
-      <span class="store">JA高砂</span>
-      <span class="store">JAやはた</span>
-      <span class="store">JA二見</span>
-      <span class="store">JA魚住</span>
-      <span class="store">ヤマダストアー北野</span>
-      <span class="store">ヤマダストアー阿弥陀</span>
-      <span class="store">ナナファーム</span>
+      <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=JA%E3%81%84%E3%81%AA%E3%81%BF%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E7%A8%B2%E7%BE%8E%E7%94%BA" target="_blank" rel="noopener">JAいなみ</a>
+      <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%AB%E3%81%98%E3%81%84%E3%82%8D%E3%83%95%E3%82%A1%E3%83%BC%E3%83%9F%E3%83%B3%20%E5%85%B5%E5%BA%AB%E7%9C%8C" target="_blank" rel="noopener">にじいろファーミン</a>
+      <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=JA%E3%81%8B%E3%82%93%E3%81%8D%20%E5%85%B5%E5%BA%AB%E7%9C%8C" target="_blank" rel="noopener">JAかんき</a>
+      <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=JA%E9%AB%98%E7%A0%82%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E9%AB%98%E7%A0%82%E5%B8%82" target="_blank" rel="noopener">JA高砂</a>
+      <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=JA%E3%82%84%E3%81%AF%E3%81%9F%20%E5%85%B5%E5%BA%AB%E7%9C%8C" target="_blank" rel="noopener">JAやはた</a>
+      <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=JA%E4%BA%8C%E8%A6%8B%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E6%98%8E%E7%9F%B3%E5%B8%82" target="_blank" rel="noopener">JA二見</a>
+      <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=JA%E9%AD%9A%E4%BD%8F%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E6%98%8E%E7%9F%B3%E5%B8%82" target="_blank" rel="noopener">JA魚住</a>
+      <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%A4%E3%83%9E%E3%83%80%E3%82%B9%E3%83%88%E3%82%A2%E3%83%BC%E5%8C%97%E9%87%8E%20%E5%85%B5%E5%BA%AB%E7%9C%8C" target="_blank" rel="noopener">ヤマダストアー北野</a>
+      <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%A4%E3%83%9E%E3%83%80%E3%82%B9%E3%83%88%E3%82%A2%E3%83%BC%E9%98%BF%E5%BC%A5%E9%99%80%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E9%AB%98%E7%A0%82%E5%B8%82" target="_blank" rel="noopener">ヤマダストアー阿弥陀</a>
+      <a class="store" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%8A%E3%83%8A%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0%20%E5%85%B5%E5%BA%AB%E7%9C%8C" target="_blank" rel="noopener">ナナファーム</a>
     </div>
   </div>
 </section>
